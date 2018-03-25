@@ -1,5 +1,5 @@
 /*
- * Version: 0.0.1
+ * Version: 0.0.2
  * Date Create: 3/24/2018 PST
  * Last Modified: 3/25/2018 PST 
  *
@@ -12,9 +12,7 @@ var users = [];
 
 app.use('/', express.static(__dirname + '/www'));
 
-server.listen(3000, function(){
-  console.log('listening on *:3000');
-});
+server.listen(process.env.PORT || 3000);
 
 io.sockets.on('connection', function(socket) {
   //new user login
