@@ -69,8 +69,7 @@ HiChat.prototype = {
         document.getElementById('messageInput').addEventListener('keyup', function(e) {
             var messageInput = document.getElementById('messageInput'),
                 msg = messageInput.value,
-                color = document.getElementById('colorStyle').value;
-			that._displayNewMsg("enter", e.keyCode, color);
+                color = '#000';
             if (e.keyCode == 13 && msg.trim().length != 0) {
                 messageInput.value = '';
                 that.socket.emit('postMsg', msg, color);
