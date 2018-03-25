@@ -1,3 +1,9 @@
+/*
+ * Version: 0.0.1
+ * Date Create: 3/24/2018 PST
+ * Last Modified: 3/25/2018 PST
+ * 
+ */
 window.onload = function() {
     //实例并初始化我们的hichat程序
     var hichat = new HiChat();
