@@ -1,0 +1,15 @@
+/*
+ * Version: 0.0.1
+ * Date Create: 3/24/2018 PST
+ * Last Modified: 3/24/2018 PST 
+ *
+ */
+{
+ "name": "chatroom",
+ "version": "0.0.1",
+ "description": "An online chatroom app",
+ "dependencies": {
+  "express": "^4.10.2",
+  "socket.io": "^2.0.4"
+ }
+}
