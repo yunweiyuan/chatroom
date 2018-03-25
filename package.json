@@ -1,0 +1,8 @@
+{
+ "name": "chatroom",
+ "version": "0.0.1",
+ "description": "An online chatroom app",
+ "dependencies": {
+  "express": "^4.10.2"
+ }
+}
