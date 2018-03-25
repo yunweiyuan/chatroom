@@ -38,7 +38,7 @@ html, body {
     padding-top: 200px;
 }
 .banner {
-    height: 108px;
+    height: 115px;
     width: 100%;
 }
 .banner p {
@@ -50,7 +50,8 @@ html, body {
     margin: 5px 0px;
 }
 #userList {
-	height: 450px;
+	top: 2px;
+	height: 445px;
 	background-color: #fff;
 	overflow: auto;
 	padding: 2px;
@@ -90,8 +91,10 @@ html, body {
     max-height: 90px;
 }
 #sendBtn {
+	-webkit-appearance: none;
     width: 50px;
     height: 96px;
+	background-color: #f0f6f4;
     float: right;
 }
 footer {
