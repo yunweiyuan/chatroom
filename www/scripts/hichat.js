@@ -31,12 +31,14 @@ HiChat.prototype = {
         this.socket.on('nickExisted', function() {
             that.socket.emit('connect');
         });
-        this.socket.on('loginSuccess', function(nickname) {
-			var nickName = nickname;
+        this.socket.on('loginSuccess', function(nickName) {
             document.title = 'hichat | ' + nickName;
             document.getElementById('loginWrapper').style.display = 'none';
             document.getElementById('messageInput').focus();
         });
+		this.socket.on('updateUserList', function(users)  {
+			that._displayUserList(users);
+		});
         this.socket.on('error', function(err) {
             if (document.getElementById('loginWrapper').style.display == 'none') {
                 document.getElementById('status').textContent = '!fail to connect :(';
@@ -85,5 +87,16 @@ HiChat.prototype = {
         msgToDisplay.innerHTML = user + '<span class="timespan">(' + date + '): </span>' + msg;
         container.appendChild(msgToDisplay);
         container.scrollTop = container.scrollHeight;
+    },
+	_displayUserList: function(users) {
+		var container = document.getElementById('userList');
+		container.innerHTML = '';
+		for (i = 0; i < users.length; i++) {			
+			var userName = users[i];	
+			var p = document.createElement('p');
+			p.textContent = userName;
+			container.appendChild(p);
+			container.scrollTop = container.scrollHeight;
+		}
     }
 };
